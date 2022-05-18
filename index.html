@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+
+<meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>test PHP</title>
+    <link href="app/assets/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div class="flex-block">
+        <div class="flex-item">
+            <h2>Категории</h2>
+            <button id="authors-read-all" onclick="showCategories()">Вывести категории</button>
+            <button onclick="addCategory()">Добавить категорию</button>
+            <div id="create-category"></div>
+            <div id="categories-table"></div>
+        </div>
+
+        <div class="flex-item">
+            <h2>Авторы</h2>
+            <button id="authors-read-all" onclick="showAuthors()">Вывести авторов</button>
+            <button onclick="addAuthor()">Добавить автора</button>
+            <div id="create-author"></div>
+            <div id="authors-table"></div>
+        </div>
+    </div>
+
+    <div>
+        <h2>Публикации</h2>
+        <button id="publication-read-all" onclick="showPublications()">Вывести все публикации</button>
+        <button onclick="addPublication()">Добавить публикацию</button>
+        <input type="text" id="search_publication" style="width: 275px;" placeholder="Введите название или автора для поиска" 
+        oninput ="searchPublication(document.getElementById('search_publication').value)"/>
+       
+        <br><br>Вывести публикацию по id:<input type="number" min="1" name="" id="idP" placeholder="введите id">
+        <button id="publication-read-id" onclick="showPublication(document.getElementById('idP').value)">Вывести</button>
+        <button onclick="searchByCategory()">Поиск по категории</button>  
+        <button onclick="searchByAuthor()">Поиск по автору</button>
+        
+        <div id="create-publication"></div>
+
+        <div id="search_by_cat"></div>
+        <div id="search_by_author"></div>
+
+        <div id="publications-table"></div>
+    </div>
+
+<script src="app/authors/read-author.js"></script>
+<script src="app/authors/create-author.js"></script>
+
+<script src="app/categories/read-category.js"></script>
+<script src="app/categories/create-category.js"></script>
+
+<script src="app/publications/create-publication.js"></script>
+<script src="app/publications/read-publication.js"></script>
+<script src="app/publications/read-one-publication.js"></script>
+<script src="app/publications/read-by-category.js"></script>
+<script src="app/publications/read-by-author.js"></script>
+<script src="app/publications/search-publication.js"></script>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!--<script src="app/authors/create-author.js"></script>
+<script src="app/authors/search-author.js"></script>
+-->
+</body>
+</html>
+
